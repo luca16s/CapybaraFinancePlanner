@@ -1,5 +1,4 @@
-﻿
-using Flunt.Notifications;
+﻿using Flunt.Notifications;
 using Flunt.Validations;
 
 namespace CapyFinPlan.Domain.Model.Taxas.Investimentos
@@ -18,7 +17,7 @@ namespace CapyFinPlan.Domain.Model.Taxas.Investimentos
             var totalIof = 97.0;
 
             if (quantidadeDias == 1)
-                return (totalIof-1.0)/100;
+                return (totalIof - 1.0) / 100;
 
             var contador = 0;
             for (int dia = 0; dia < quantidadeDias; dia++)
@@ -34,7 +33,7 @@ namespace CapyFinPlan.Domain.Model.Taxas.Investimentos
                 contador++;
             }
 
-            return totalIof/100;
+            return totalIof / 100;
         }
     }
 }

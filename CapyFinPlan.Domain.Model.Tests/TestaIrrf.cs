@@ -1,7 +1,4 @@
-﻿using CapyFinPlan.Domain.Model.Interfaces;
-using CapyFinPlan.Domain.Model.Taxas.Investimentos;
-
-using System;
+﻿using CapyFinPlan.Domain.Model.Taxas.Investimentos;
 
 using Xunit;
 
@@ -10,6 +7,7 @@ namespace CapyFinPlan.Domain.Model.Tests
     public class TestaIrrf
     {
         private readonly Irrf Impostos;
+
         public TestaIrrf()
         {
             Impostos = new Irrf();

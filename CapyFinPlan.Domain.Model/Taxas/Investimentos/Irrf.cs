@@ -1,5 +1,4 @@
-﻿
-using Flunt.Notifications;
+﻿using Flunt.Notifications;
 using Flunt.Validations;
 
 namespace CapyFinPlan.Domain.Model.Taxas.Investimentos

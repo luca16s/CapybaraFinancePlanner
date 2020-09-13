@@ -6,8 +6,10 @@ namespace CapyFinPlan.Domain.Model.Enum
     {
         [Description("ELO")]
         Elo,
+
         [Description("MASTERCARD")]
         MasterCard,
+
         [Description("VISA")]
         Visa,
     }

@@ -7,6 +7,7 @@ namespace CapyFinPlan.Domain.Model.Tests
     public class TestaIof
     {
         private readonly Iof Impostos;
+
         public TestaIof()
         {
             Impostos = new Iof();
