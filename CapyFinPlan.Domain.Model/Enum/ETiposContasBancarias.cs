@@ -2,7 +2,7 @@
 
 namespace CapyFinPlan.Domain.Model.Enum
 {
-    public enum TiposContasBancarias
+    public enum ETiposContasBancarias
     {
         [Description("Conta Corrente")]
         Corrente,

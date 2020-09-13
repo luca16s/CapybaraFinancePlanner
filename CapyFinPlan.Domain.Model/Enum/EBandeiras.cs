@@ -2,7 +2,7 @@
 
 namespace CapyFinPlan.Domain.Model.Enum
 {
-    public enum Bandeiras
+    public enum EBandeiras
     {
         [Description("ELO")]
         Elo,

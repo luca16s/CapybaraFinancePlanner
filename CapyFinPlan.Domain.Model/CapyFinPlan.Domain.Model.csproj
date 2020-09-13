@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <UserSecretsId>9933eb3c-3c6b-4cc0-bd1d-471fbc1c4c10</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Modelos\" />
+    <PackageReference Include="Flunt" Version="1.0.5" />
   </ItemGroup>
 
 </Project>
