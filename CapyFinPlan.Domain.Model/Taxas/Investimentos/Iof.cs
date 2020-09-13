@@ -1,15 +1,16 @@
-﻿using CapyFinPlan.Domain.Model.Interfaces;
-
-using System;
+﻿
+using Flunt.Notifications;
+using Flunt.Validations;
 
 namespace CapyFinPlan.Domain.Model.Taxas.Investimentos
 {
-    public class Iof : IImpostos
+    public class Iof : Notifiable
     {
         public double RetornarAliquota(int quantidadeDias)
         {
-            if (quantidadeDias < 0)
-                throw new Exception("Quantidade de dias não pode ser negativa.");
+            AddNotifications(new Contract()
+                .Requires()
+                .IsLowerThan(0, quantidadeDias, nameof(quantidadeDias), "Quantidade de dias não pode ser negativa."));
 
             if (quantidadeDias >= 30 || quantidadeDias == 0)
                 return default;

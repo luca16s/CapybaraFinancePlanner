@@ -9,16 +9,17 @@ namespace CapyFinPlan.Domain.Model.Tests
 {
     public class TestaIrrf
     {
-        private readonly IImpostos Impostos;
+        private readonly Irrf Impostos;
         public TestaIrrf()
         {
             Impostos = new Irrf();
         }
 
         [Fact]
-        public void TestaAliquotaQuandoNumeroMenorZero()
+        public void DeveRetornarErroQuandoDiasMenorQueZero()
         {
-            Assert.Throws<Exception>(() => Impostos.RetornarAliquota(-1));
+            Impostos.RetornarAliquota(-1);
+            Assert.True(Impostos.Invalid);
         }
 
         [Fact]

@@ -1,7 +1,4 @@
-using CapyFinPlan.Domain.Model.Interfaces;
 using CapyFinPlan.Domain.Model.Taxas.Investimentos;
-
-using System;
 
 using Xunit;
 
@@ -9,16 +6,17 @@ namespace CapyFinPlan.Domain.Model.Tests
 {
     public class TestaIof
     {
-        private readonly IImpostos Impostos;
+        private readonly Iof Impostos;
         public TestaIof()
         {
             Impostos = new Iof();
         }
 
         [Fact]
-        public void TestaQuantidadeDeDiasNegativos()
+        public void DeveRetornarErroQuandoDiasMenorQueZero()
         {
-            Assert.Throws<Exception>(() => Impostos.RetornarAliquota(-1));
+            Impostos.RetornarAliquota(-1);
+            Assert.True(Impostos.Invalid);
         }
 
         [Fact]
