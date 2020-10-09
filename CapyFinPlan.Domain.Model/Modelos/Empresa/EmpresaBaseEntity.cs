@@ -1,13 +1,12 @@
 ﻿using Flunt.Validations;
 
-namespace CapyFinPlan.Domain.Model.Modelos.Corretora
+namespace CapyFinPlan.Domain.Model.Modelos.Empresa
 {
-    public class Corretora : Entidade
+    public class EmpresaBaseEntity : Entidade
     {
-        public Corretora(string nome, string cnpj)
+        public EmpresaBaseEntity(string nome, string cnpj)
         {
-            AddNotifications(
-                new Contract()
+            AddNotifications(new Contract()
                 .Requires()
                 .IsNotNullOrWhiteSpace(nome, nameof(Nome), "Nome da Corretora não pode estar em branco."),
                 new Contract()

@@ -1,40 +1,33 @@
-﻿using Flunt.Validations;
+﻿using CapyFinPlan.Domain.Model.Enum;
+
+using Flunt.Validations;
 
 using System;
 
 namespace CapyFinPlan.Domain.Model.Modelos.Ativos
 {
-    public class AtivoBase : Entidade
+    public abstract class AtivoBase : Entidade
     {
-        public AtivoBase(string codigo, DateTime dataCompra, decimal valorCompra)
+        public AtivoBase(DateTime dataInvestimento, decimal valorAtivo, ETipoOperacao operacao)
         {
-            AddNotifications(new Contract()
-                .Requires()
-                .IsNotNullOrWhiteSpace(Codigo, nameof(Codigo), "O Ticker não pode estar em branco."),
+            AddNotifications(
                 new Contract()
                 .Requires()
-                .IsGreaterThan(dataCompra, DateTime.Today, nameof(DataCompra), "A Data de compra não pode ser superior a data Atual."),
+                .IsGreaterThan(dataInvestimento, DateTime.Today, nameof(DataInvestimento), "A Data de compra não pode ser superior a data Atual."),
                 new Contract()
                 .Requires()
-                .IsLowerThan(valorCompra, default, nameof(ValorCompra), "Valor de compra não pode ser negativo."));
+                .IsLowerThan(valorAtivo, default, nameof(ValorAtivo), "Valor de compra não pode ser negativo."),
+                new Contract()
+                .Requires()
+                .IsNull(operacao, nameof(Operacao), "Operação não pode estar em branco."));
 
-            Codigo = codigo;
-            DataCompra = dataCompra;
-            ValorCompra = valorCompra;
+            DataInvestimento = dataInvestimento;
+            ValorAtivo = valorAtivo;
+            Operacao = operacao;
         }
 
-        public string Codigo { get; }
-        public DateTime DataCompra { get; }
-        public decimal ValorCompra { get; set; }
-
-        public decimal CalcularPrecoMedioAtivoConsiderandoCustos(int quantidadeComprada, decimal valorCompra, decimal custoCompra)
-        {
-            return CalcularPrecoMedioAtivo(quantidadeComprada, valorCompra + custoCompra);
-        }
-
-        public decimal CalcularPrecoMedioAtivo(int quantidade, decimal valorCompra)
-        {
-            return quantidade * valorCompra;
-        }
+        public DateTime DataInvestimento { get; }
+        public decimal ValorAtivo { get; set; }
+        public ETipoOperacao Operacao { get; set; }
     }
 }

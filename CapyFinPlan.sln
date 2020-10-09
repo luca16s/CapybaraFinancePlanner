@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30404.54
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapyFinPlan.Domain.Model", "CapyFinPlan.Domain.Model\CapyFinPlan.Domain.Model.csproj", "{AED27F70-53B4-4758-B980-9F0473DB5D99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapyFinPlan.Domain.Model", "CapyFinPlan.Domain.Model\CapyFinPlan.Domain.Model.csproj", "{AED27F70-53B4-4758-B980-9F0473DB5D99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapyFinPlan.Domain.Model.Tests", "CapyFinPlan.Domain.Model.Tests\CapyFinPlan.Domain.Model.Tests.csproj", "{9CE10EB5-0D2F-448E-8485-842D83F8E3C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapyFinPlan.Domain.Model.Tests", "CapyFinPlan.Domain.Model.Tests\CapyFinPlan.Domain.Model.Tests.csproj", "{9CE10EB5-0D2F-448E-8485-842D83F8E3C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapyFinPlan.Domain.Service", "CapyFinPlan.Domain.Service\CapyFinPlan.Domain.Service.csproj", "{0E251C3B-9089-4B5A-B330-C525FB30F4AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9CE10EB5-0D2F-448E-8485-842D83F8E3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CE10EB5-0D2F-448E-8485-842D83F8E3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CE10EB5-0D2F-448E-8485-842D83F8E3C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E251C3B-9089-4B5A-B330-C525FB30F4AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E251C3B-9089-4B5A-B330-C525FB30F4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E251C3B-9089-4B5A-B330-C525FB30F4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E251C3B-9089-4B5A-B330-C525FB30F4AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
