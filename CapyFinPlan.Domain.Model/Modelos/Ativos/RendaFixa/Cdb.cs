@@ -11,5 +11,10 @@ namespace CapyFinPlan.Domain.Model.Modelos.Ativos.RendaFixa
         {
 
         }
+
+        public decimal Rentabilidade()
+        {
+            return default;
+        }
     }
 }
